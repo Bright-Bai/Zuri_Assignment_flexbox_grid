@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: #000;
+
+  height: 100vh;
+}
+header {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: var(--background-color);
+  border: 2px solid var(--background-color);
+  border-radius: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid rgb(255, 94, 0);
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(255, 94, 0);
+}
+/* button a {
+  border: 2px solid red;
+  padding: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: orange;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button a:hover {
+  opacity: 0.7; 
+}*/
+
+main {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "a a b"
+    "c d d"
+    "c e e";
+
+  gap: 10px;
+  padding: 10px;
+}
+
+main div {
+  padding: 5rem;
+  text-align: center;
+}
+
+.item-a {
+  background-color: rgb(255, 94, 0);
+  grid-area: a;
+}
+
+.item-b {
+  background-color: orange;
+  grid-area: b;
+}
+
+.item-c {
+  background-color: green;
+  grid-area: c;
+}
+
+.item-d {
+  background-color: rgb(95, 167, 235);
+  grid-area: d;
+}
+
+.item-e {
+  background-color: rgb(95, 167, 235);
+  grid-area: e;
+}
